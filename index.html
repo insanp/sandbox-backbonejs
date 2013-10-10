@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section id="wallapp">
+            <header id="header">
+                <h1>My Wall</h1>
+                <p>What's on your mind?</p>
+                <div>
+                    <input id="wallapp-name" placeholder="Guest" type="text" />
+                    <input id="wallapp-message" placeholder="Type your message here..." />
+                    <a id="wallapp-act-post" href="#">Post</a>
+                </div>
+            </header>
+            
+            <br/>
+            <br/>
+            
+            <section id="main">
+                <table id="wall-table">
+                    <thead>
+                        <tr>
+                            <td><b>Name</b></td>
+                            <td><b>Message</b></td>
+                        </tr>
+                    </thead>
+                    <tbody id="wall-table-list">
+                        
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        
+        <script type="text/template" id="item-template">
+            <td style="width:100px; color:red;"><%=name%></td>
+            <td style="color: blue;"><%=message%></td>
+        </script>
+        
+        <!-- Load libraries -->
+        <script src="lib/jquery-1.10.2.min.js"></script>
+        <script src="lib/underscore-min.js"></script>
+        <script src="lib/backbone.min.js"></script>
+        <script src="lib/backbone.localStorage.js"></script>
+        
+        <!-- Load models, collections, and views -->
+        <script src="js/models/message.js"></script>
+        <script src="js/collections/messages.js"></script>
+        <script src="js/views/message-view.js"></script>
+        <script src="js/views/app-view.js"></script>
+        
+        <!-- Load application -->
+        <script src="js/app.js"></script>
+    </body>
+</html>
